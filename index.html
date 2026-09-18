@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Free Stock Market Training</title>
+  <style>
+    :root{
+      --bg1:#0f172a; --bg2:#1e293b; --accent:#f59e0b; --muted:#94a3b8; --white:#ffffff;
+    }
+    body{margin:0;font-family:"Segoe UI",Roboto,Arial,sans-serif;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:var(--white);-webkit-font-smoothing:antialiased}
+    .wrap{max-width:1000px;margin:48px auto;padding:36px;text-align:center}
+    .logo img{height:64px}
+    .hero{margin-top:8px}
+    h1{font-size:34px;margin:12px 0}
+    p.lead{color:var(--muted);font-size:17px;margin:8px 0 22px}
+    .cta{background:var(--accent);color:#0b1220;padding:16px 28px;border-radius:12px;border:none;font-weight:700;font-size:18px;cursor:pointer;box-shadow:0 12px 30px rgba(245,158,11,0.18);animation:pulse 1.6s infinite}
+    .cta:hover{transform:translateY(-3px)}
+    @keyframes pulse{
+      0%{transform:scale(1);box-shadow:0 0 0 0 rgba(245,158,11,0.35)}
+      70%{transform:scale(1.03);box-shadow:0 0 0 18px rgba(245,158,11,0)}
+      100%{transform:scale(1);box-shadow:0 0 0 0 rgba(245,158,11,0)}
+    }
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:34px 0}
+    .card{background:rgba(255,255,255,0.03);padding:18px;border-radius:12px;text-align:left}
+    .card h3{margin:0 0 8px;color:#fbbf24}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .disclaimer{background:rgba(255,255,255,0.02);padding:14px;border-radius:10px;color:var(--muted);font-size:13px;text-align:left;margin-top:22px}
+    footer{margin-top:28px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:center}
+    footer a{color:var(--muted);text-decoration:none}
+    footer a:hover{text-decoration:underline}
+    @media(max-width:640px){
+      h1{font-size:24px}
+      .wrap{padding:20px;margin:20px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="logo"><img src="logo.png" alt="Digital Ads Expert"></div>
+    <div class="hero">
+      <h1>🚀 Free Stock Market Training</h1>
+      <p class="lead">Live educational session — charts, risk management aur market study. Seats limited; reserve your free spot.</p>
+      <button id="cta" class="cta" aria-label="Reserve your free spot">Reserve Your Free Spot Now 🚀</button>
+    </div>
+    <div class="features" aria-hidden="false">
+      <div class="card"><h3>📞 Live Sessions</h3><p>Interactive learning — no profit promises. Sirf educational content.</p></div>
+      <div class="card"><h3>📊 Chart Study</h3><p>Real-time chart analysis — step-by-step, practical approach.</p></div>
+      <div class="card"><h3>🔥 Limited Seats</h3><p>Seats jaldi fill hoti hain — click karke apna spot reserve karein.</p></div>
+    </div>
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> Ye page educational purpose ke liye hai. Hum financial advice ya guaranteed returns promise nahi karte. Stock market me nuksan ho sakta hai — apna research karein.
+    </div>
+    <footer>
+      <div>© <span id="year"></span> Digital Ads Expert</div>
+      <div><a href="terms.html">Terms</a> | <a href="privacy.html">Privacy</a> | <a href="disclaimer.html">Disclaimer</a></div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('cta').addEventListener('click', function(){
+      window.location.href = 'thankyou.html';
+    });
+  </script>
+</body>
+</html>
